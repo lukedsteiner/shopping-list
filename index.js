@@ -16,10 +16,10 @@ $('form').on('submit', event => {
     $('.shopping-list').append(code);
 })
 
-$('ul').on('click', '.shopping-item-delete', event => {
+$('ul').on('click', '.shopping-item-delete', function() {
    $(this).closest('li').remove();
 })
 
-$('ul').on('click', '.shopping-item-toggle', event => {
-  $(event.target).closest('span').toggleClass('shopping-item__checked');
+$('ul').on('click', '.shopping-item-toggle', function() {
+  $(this).closest('li').find('.shopping-item').toggleClass('shopping-item__checked');
 })
